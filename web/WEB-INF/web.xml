@@ -5,7 +5,7 @@
         <servlet-class>controller.LoginChecker</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Registration</servlet-name>
+        <servlet-name>RegistrationChecker</servlet-name>
         <servlet-class>controller.RegistrationChecker</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -13,8 +13,8 @@
         <url-pattern>/LoginChecker</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Registration</servlet-name>
-        <url-pattern>/Registration</url-pattern>
+        <servlet-name>RegistrationChecker</servlet-name>
+        <url-pattern>/RegistrationChecker</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

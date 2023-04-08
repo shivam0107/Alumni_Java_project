@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.LoginAuthenticator;
+import model.registrationAuthenticator;
 
 /**
  *
@@ -23,7 +24,7 @@ public class RegistrationChecker extends HttpServlet
 {
 
      public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("registration.html");
+        response.sendRedirect("sign.html");
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,12 +53,12 @@ public class RegistrationChecker extends HttpServlet
         user.setP_year(p_year);
         
 
-        LoginAuthenticator la = new LoginAuthenticator();
-        boolean login = la.isLogin(user);
+        registrationAuthenticator Ra = new registrationAuthenticator();
+        boolean login = Ra.isRegister(user);
 
         if (login) {
             HttpSession session = request.getSession(true);
-            session.setAttribute("username", username);
+            session.setAttribute("username", r_username);
             response.sendRedirect("home.jsp");
         } else {
             response.sendRedirect("login.html");
