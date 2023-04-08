@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+   <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="sign.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- register here  -->
+   <div class="register">
+      REGISTER HERE
+    </div>
+  <!-- registration section  -->
+  <div class="container">
+    <div class="form-container">
+        <form action="RegistrationChecker" method="post">
+        <div border="0" class="input-container">
+          <div   class="row">
+            <div>Name:</div>
+            <div>
+              <input type="text" name="r_username" placeholder="Enter your Full name" />
+            </div>
+          </div>
+          <div  class="row">
+            <div>Email Id:</div>
+            <div>
+              <input type="email" name="email" placeholder="Enter your Email" />
+            </div>
+          </div>
+          <div  class="row">
+            <div>Phone Number:</div>
+            <div>
+              <input type="tel" name="phone" placeholder="Enter your Phone Number" />
+            </div>
+          </div>
+          <div  class="row">
+            <div>Select Gender:</div> 
+            <div class="row">
+              <select name="gender" id="">
+                <option value="">Please selct one</option>
+                <option value="female">female</option>
+                <option value="male">male</option>
+              </select>
+            </div>
+          </div>
+          <div  class="row">
+            <div>Branch:</div>
+            <div>
+              <select name="branch" id="">
+                <option value="">Please selct one</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+                <option value="EE">EE</option>
+                <option value="CE">CE</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="ME">ME</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>Passing Year:</div>
+            <div>
+              <input type="number" name="p_year" placeholder="Passing year" min="2007" max="2023" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>Select City:</div>
+            <div>
+                <input type="text" name="city" placeholder="Enter your city">
+            </div>
+
+          </div>
+
+           <div class="row">
+            <div>Password:</div>
+            <div>
+                <input type="password" name="r_password" placeholder="Enter your password here">
+            </div>
+
+          </div>
+          <div class="row">
+            <div>Confirm Password:</div>
+            <div>
+                <input type="password" name="c_password" placeholder="Enter your password here">
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+
+      <div class="registration" onclick="submit">
+      REGISTER
+    </div>
+  </div>
+
+  <hr>
+ <!-- footer section  -->
+    <footer>
+   
+        <div class="footer-section">
+            <div class="about-institute-section">
+                <img src="image/iist logo.jpg" alt="">
+                <p class="about">Indore Institute of Science and Technology, Indore was established 2003. IIST is recognized as a leading institute in the state of Madhya Pradesh.</p>
+            </div>
+    
+            <div class="useful-links">
+                <h2>UseFul links</h2>
+                <div class="nav-links">
+                    <li class="nav-items"><a href="">HOME</a></li>
+                    <li class="nav-items"><a href="">ALUMNI</a></li>
+                    <li class="nav-items"><a href="">NEWS&EVENT</a></li>
+                    <li class="nav-items"><a href="">COMITEE</a></li>
+                </div>
+            </div>
+    
+            <div class="about useful-links">
+                <h2>about</h2>
+                <div class="nav-links">
+                    <li class="nav-items"><a href="">SEARCH</a></li>
+                    <li class="nav-items"><a href="">SEARCH</a></li>
+                    <li class="nav-items"><a href="">JOb-POST</a></li>
+                    <li class="nav-items"><a href="">Contact</a></li>
+                </div>
+            </div>
+    
+            <div class="social-media">
+                <div class="Login-dashboard">
+                    <a href="login.html">login Dashboard</a>
+                </div>
+
+                    <div class="social-handels">
+                        <i class="fa-brands fa-facebook" class="icons"></i>
+                        <i class="fa-brands fa-instagram" class="icons"></i>
+                        <i class="fa-brands fa-twitter"class="icons"></i>
+                        <i class="fa-brands fa-linkedin" class="icons"></i>
+
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <hr/>
+
+    <p class="copyright">© 2022 IIST Alumni / All rights reserved</p>
+
+    <div class="end">
+
+    </div>
+
+
+
+    
+
+ 
+</body>
+
+</html>
