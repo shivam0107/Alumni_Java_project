@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<%-- 
+    Document   : profile
+    Created on : 10 Apr, 2023, 10:44:31 PM
+    Author     : shivam singh
+--%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALUMNUS</title>
+<%--<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="db.DBConnector"%>
+<%@page import="java.sql.Statement"%>--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ALUMNUS-PROFILE</title>
 
     <!-- Bootstrap 5 CSS file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,15 +37,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="profile.css">
     <!-- CUSTOM CSS END -->
 
 
 
-</head>
-
-
+    </head>
+   
 <body class="main">
+    
+    
+    <%
+            String username = (String)session.getAttribute("username");
+            String branch = (String)session.getAttribute("branch");
+            String city  =  (String)session.getAttribute("city");
+            String email  =  (String)session.getAttribute("email");
+            String phone  =  (String)session.getAttribute("phone");
+            String p_year  =  (String)session.getAttribute("p_year");
+            System.out.println(branch);
+            if(username == null || username.trim().equals(""))
+            {
+                response.sendRedirect("login.html");
+            }
+    %>
+
+    <!-- nav section start -->
+
 
     <header class="top ">
 
@@ -51,8 +77,7 @@
                 </div>
 
                 <div class="col-md-2 sign">
-                    <a href="sign.html"><button>signUp</button></a>
-                    <a href="login.html"><button>login</button></a>
+                    YOUR PROFILE
                 </div>
               
 
@@ -80,6 +105,7 @@
                 <div class="col-md-8 nav-item">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Students</a></li>
+                    <li><a href="home.jsp">Alumni</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Events & Notice</a></li>
                     <li><a href="#">Contact us</a></li>
@@ -104,112 +130,72 @@
     </div>
     <!-- navbar end -->
 
+    <!-- alumni profile section start -->
 
-    <!--Hero Section Start-->
+    <section class="profile-section">
 
-    <section class="hero">
-        <div class="hero-img">
-            <img id="img1" src="image/background_image.png" alt="">
-            <div class="center">WELCOME TO INDORE INSTITUTE ALUMNI PORTAL</div>
+        <div class="member-profile">
+            <h1>Welcome <%=username%></h1>
+            <img src="image/shivam (2).jpeg" alt="">
+            <p class="member-name"><%=username%></p>
+            <p class="member-email"><%=email%></p>
+            <p class="about-member">I am a software developer</p>
+        </div>
 
-            <div class="center-next">Connect back with your Batchmate and INSTITUTE</div>
+        <hr width="75%" size="5">
+
+        <div class="other-information-section">
+
+            <div  class="about-section">
+                 <p>branch</p>
+                <p><%=branch%></p>
+            </div>
+                <hr class="h-row"  size="5">
+            
+            <div class="about-section">
+                <p>Passing year</p>
+                <p><%=p_year%></p>
+            </div>
+                <hr class="h-row" size="5">
+
+            <div class="about-section">
+                
+                <p>city</p>
+                <p><%=city%></p>
+            
+            </div>
+                <hr class="h-row" size="5">
+
+            <div class="about-section">
+                <p>phone</p>
+                <p><%=phone%></p>
+            </div>
+                <hr class="h-row" size="5">
+            
+            <div class="about-section">
+                <p>Language</p>
+                <p>English</p>
+
+            </div>
+
 
         </div>
+
+     
+
+
     </section>
-    <!--Hero Section End-->
-
-    <div id="strip"></div>
-
-    <!-- alumni connection -->
-
-    <div class="connection-section">
-        <h1>Connect with your Alumni</h1>
-        <div class="container connection-section-item">
-            <div class="connection-item">
-                <img src="image/city.png" alt="">
-                <h3>Alumni in your City</h3>
-                <p>
-                    Lorem ipsum dolor sit a
-                    met consectetur adipisicing elit. Dolore error ea
-                    rerum aliquam repudiandae aperiam. A, eum! Obcaecat
-
-                </p>
-                <button>Alumni in your City</button>
-            </div>
-            <div class="connection-item">
-                <img src="image/batchmate.png" alt="">
-                <h3>Your Batchmates</h3>
-                <p>
-                    Lorem ipsum dolor sit a
-                    met consectetur adipisicing elit. Dolore error ea
-                    rerum aliquam repudiandae aperiam. A, eum! Obcaecat
-
-                </p>
-                <button>your Batchmate</button>
-            </div>
-            <div class="connection-item">
-                <img src="image/alumnidirectory.png" alt="">
-                <h3>Alumni Directory</h3>
-                <p>
-                    Lorem ipsum dolor sit a
-                    met consectetur adipisicing elit. Dolore error ea
-                    rerum aliquam repudiandae aperiam. A, eum! Obcaecat
-
-                </p>
-                <button>Alumni Directory</button>
-            </div>
-            <div class="connection-item">
-                <img src="image/profile.png" alt="">
-                <h3>Your Alumni Profile</h3>
-                <p>
-                    Lorem ipsum dolor sit a
-                    met consectetur adipisicing elit. Dolore error ea
-                    rerum aliquam repudiandae aperiam. A, eum! Obcaecat
-
-                </p>
-                <button>Your Alumni Profile</button>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- alumni connection end -->
 
 
 
 
-    <!-- About Section Start -->
-    <section id="about-us" class="about">
-        <center>
-            <h1 class="heading">About us</h1>
-        </center>
-
-        <div class="container">
 
 
-            <div class="row">
-                <div class="col-md-5">
-                    <img id="img-1" src="image/about us.png" alt="">
-                </div>
-                <div class="col-md-7 about-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ullam recusandae perferendis,
-                        cupiditate ratione qui neque error quos reprehenderit modi officia incidunt vitae mollitia,
-                        animi nobis asperiores nesciunt blanditiis deserunt.</p>
+    <!-- alumni profile section end -->
 
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit modi omnis suscipit inventore,
-                        esse laboriosam soluta voluptates deleniti veritatis? Veniam?</p>
 
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- About Section end-->
-
-      <!-- footer section -->
-
-      <footer>
+    <!-- footer section  -->
+       <footer>
    
         <div class="footer-section">
             <div class="about-institute-section">
@@ -239,7 +225,7 @@
     
             <div class="social-media">
                 <div class="Login-dashboard">
-                    login Dashboard
+                    <a href="logout.jsp">Click here to Logout</a>
                 </div>
 
                     <div class="social-handels">
@@ -252,9 +238,10 @@
             </div>
         </div>
     </footer>
+     
 
-
-    <hr/>
+    
+    <hr class="footer-row"/>
 
     <p class="copyright">© 2022 IIST Alumni / All rights reserved</p>
 
@@ -262,19 +249,7 @@
 
     </div>
 
-
-
-    
-
-      
-
-
-
-
-
-
-
-
+    <!-- footer section end  -->
 
 
 
@@ -287,3 +262,4 @@
         crossorigin="anonymous"></script>
 
 </body>
+</html>

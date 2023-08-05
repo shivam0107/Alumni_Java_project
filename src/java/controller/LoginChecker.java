@@ -26,14 +26,23 @@ public class LoginChecker extends HttpServlet {
         userDTO user = new userDTO();
         user.setUsername(username);
         user.setPassword(password);
+        
+        
+       
 
         LoginAuthenticator la = new LoginAuthenticator();
         boolean login = la.isLogin(user);
 
         if (login) {
             HttpSession session = request.getSession(true);
-            session.setAttribute("username", username);
-            response.sendRedirect("home.jsp");
+            session.setAttribute("username", user.getR_username());
+            session.setAttribute("city", user.getCity());
+            session.setAttribute("p_year", user.getP_year());
+            session.setAttribute("phone", user.getPhone());
+            session.setAttribute("branch", user.getBranch());
+            session.setAttribute("email", user.getEmail());
+            
+            response.sendRedirect("profile.jsp");
         } else {
             response.sendRedirect("login.html");
         }

@@ -18,10 +18,10 @@ public class DBConnector
     {
         try 
         {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Driver Loaded");
 
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registration","root","root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alumni","root","root");
             System.out.println("Connected");
 
             st = con.createStatement();

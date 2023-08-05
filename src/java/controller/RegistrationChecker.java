@@ -59,7 +59,12 @@ public class RegistrationChecker extends HttpServlet
         if (login) {
             HttpSession session = request.getSession(true);
             session.setAttribute("username", r_username);
-            response.sendRedirect("home.jsp");
+            session.setAttribute("branch" , branch);
+            session.setAttribute("city" , city);
+            session.setAttribute("email" , email);
+            session.setAttribute("phone" , phone);
+            session.setAttribute("p_year" , p_year);
+            response.sendRedirect("profile.jsp");
         } else {
             response.sendRedirect("login.html");
         }

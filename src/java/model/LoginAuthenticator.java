@@ -21,15 +21,30 @@ public class LoginAuthenticator
          String password = user.getPassword();
         
         String tablePassword="";
+        
         try
         {
             Statement st = DBConnector.getStatement();
-            String query = "SELECT userPassword FROM user WHERE userId ='"+username+"'";
+            String query = "SELECT r_password,r_username,branch,p_year,City,mobile_no FROM registration WHERE r_username ='"+username+"'";
             System.out.println("Query = "+query);
             ResultSet rs = st.executeQuery(query);
             if(rs.next())
             {
                 tablePassword = rs.getString(1);
+                String r_username = rs.getString(2);
+                String branch = rs.getString(3);
+                String p_year = rs.getString(4);
+                String city = rs.getString(5);
+                String phone = rs.getString(6);
+                
+                user.setR_username(r_username);
+                user.setCity(city);
+                user.setP_year(p_year);
+                user.setPhone(phone);
+                user.setBranch(branch);
+                user.setEmail(username);
+                
+               
             }
             else
             {

@@ -1,0 +1,297 @@
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+    body{
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* navbar section start  */
+
+        .top {
+            height: 90px;
+            background-color: #f4f462;
+            background-image: linear-gradient(to right, #ffcc00, rgb(73, 170, 239));
+    
+        }
+    
+        .logo {
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    
+        .sign {
+            margin-top: 20px;
+            color: #f1f50a;
+            font-weight: 600;
+            font-size: x-large;
+        }
+    
+        .sign button {
+            color: white;
+            padding: 10px;
+        }
+    
+        .sign button {
+            background: transparent;
+            border-radius: 5px;
+            background-color: #367E18;
+        }
+    
+        login {
+            margin-top: 20px;
+            float: left;
+        }
+    
+        .login button {
+            color: white;
+            padding: 10px;
+        }
+    
+        .login button {
+            background: transparent;
+            border-radius: 5px;
+            background-color: #367E18;
+        }
+    
+    
+    
+    
+    
+    
+        .shail_img img {
+            padding-left: 100px;
+            height: 50px;
+            width: 50px;
+            margin-top: 0px;
+            margin-bottom: -100px;
+        }
+    
+    
+        .header-wrapper h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #080908;
+            font-weight: 600;
+            margin-top: 8px;
+            font-size: 30px;
+            font-family: cursive;
+        }
+    
+        .nav-item {
+            margin-top: 20px;
+            text-decoration: none;
+            list-style: none;
+        }
+    
+        .nav-item a {
+            float: left;
+            padding-right: 30px;
+            text-decoration: none;
+            color: rgb(5, 112, 219);
+            font-weight: 600;
+    
+        }
+    
+        .nav-item a:hover,
+        .nav-item a:active {
+            color: black;
+    
+        }
+    
+        .nav-search {
+            margin-top: 15px;
+    
+        }
+    
+        #search {
+            background-color: white;
+    
+        }
+    
+        .header-wrapper {
+            background-color: #ffcc00;
+            height: 60px;
+    
+        }
+    
+        .header-container input {
+            margin-left: 40px;
+            background: transparent;
+            border-radius: 5px;
+            text-align: center;
+            border-color: azure;
+            color: azure;
+        }
+    
+    
+    
+    
+        /* navbar end */
+
+
+
+.h-row{
+    
+  
+   width: 30em;
+   
+    
+    color: #27f74d;
+    
+}
+
+/* profile-section  */
+
+.profile-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #060605;
+    border-radius: 10px;
+    margin:  1em 10em 1em 10em;
+   
+}
+
+.about-section{
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.member-profile{
+    position: relative;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* profile section end  */
+
+
+
+
+/* footer section start  */
+
+.about-institute-section{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+    
+.footer-section{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: 2rem 5rem;
+}
+
+.footer-section img{
+    width: 70%;
+}
+
+.footer-section .about-institute-section{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 300px;
+
+}
+
+.useful-links h2{
+    color: gray;
+}
+
+.useful-links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.useful-links .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.useful-links .nav-links li a{
+    text-decoration: none;
+
+}
+.useful-links .nav-links li {
+    list-style-type: none;
+
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.social-media .social-handels{
+    display: flex;
+    flex-direction: row;
+    gap: 5em;   
+}
+
+.social-handels .icons{
+    width: 500px;
+   
+}
+
+.social-media .Login-dashboard{
+    height: 50px;
+    width: 300px;
+    background-color: rgb(95, 146, 241);
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    padding-top: 0.8em;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.footer-row{
+    width: 100%;
+   
+    color: grey;
+    height: 10px;
+    
+}
+
+.copyright{
+    text-align: center;
+    padding: 20px;
+}
+
+
+.end{
+    background-color: #367E18;
+    height: 20px;
+    
+}
+
+
+/* footer section end  */
+

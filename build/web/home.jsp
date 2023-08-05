@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="alumni.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="main">
        
         <%
             String username = (String)session.getAttribute("username");
@@ -52,7 +52,7 @@
         <div class="nav-item-section">
             <li><a href="../index.html" class="active">Home</a></li>
             <li><a href="#">Students</a></li>
-            <li><a href="alumni/Alumni.html">Alumni</a></li>
+<!--            <li><a href="alumni/Alumni.html">Alumni</a></li>-->
             <li><a href="#">Careers</a></li>
             <li><a href="#">Events & Notice</a></li>
             <li><a href="#">Contact us</a></li>

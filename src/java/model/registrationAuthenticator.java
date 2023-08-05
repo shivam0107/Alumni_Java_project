@@ -33,7 +33,7 @@ public class registrationAuthenticator {
         try
         {
             Statement st = DBConnector.getStatement();
-            String query = "Insert into user values('"+email+"','"+r_username+"','"+gender+"','"+branch+"','"+p_year+"','"+city+"','"+r_password+"','"+phone+"')";
+            String query = "Insert into registration values('"+email+"','"+r_username+"','"+gender+"','"+branch+"','"+p_year+"','"+city+"','"+r_password+"','"+phone+"')";
             int i = st.executeUpdate(query);
             if(i>0){
                 return true;
