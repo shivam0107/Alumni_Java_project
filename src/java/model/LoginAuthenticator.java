@@ -25,7 +25,7 @@ public class LoginAuthenticator
         try
         {
             Statement st = DBConnector.getStatement();
-            String query = "SELECT r_password,r_username,branch,p_year,City,mobile_no FROM registration WHERE r_username ='"+username+"'";
+            String query = "SELECT r_password,r_username,branch,p_year,City,mobile_no FROM registration WHERE email ='"+username+"'";
             System.out.println("Query = "+query);
             ResultSet rs = st.executeQuery(query);
             if(rs.next())
